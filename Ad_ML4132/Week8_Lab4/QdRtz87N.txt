@@ -1,0 +1,64 @@
+8.4s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.4s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.4s 3 0.00s - to python to disable frozen modules.
+8.4s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+9.0s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+9.0s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+9.0s 7 0.00s - to python to disable frozen modules.
+9.0s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+17.6s 9 使用设备: cuda
+17.6s 10 成功找到数据文件: /kaggle/input/short-jokes/shortjokes.csv
+17.8s 11 
+17.8s 12 --- 创建数据集 (修正后) ---
+19.3s 13 成功找到笑话列: 'Joke'
+19.5s 14 词汇过滤前: 191284, 过滤后(出现>=2次): 77741
+19.8s 15 总词数: 4071141
+19.8s 16 最终词汇表大小 (包含<unk>): 77742
+19.8s 17 可训练样本数: 4071137
+19.8s 18 模型类定义完成！
+25.9s 19 
+25.9s 20 模型参数数量: 30,325,934
+25.9s 21 
+25.9s 22 --- 开始训练 ---
+907.5s 23 Epoch 1/10, 平均损失: 5.5893
+1790.3s 24 Epoch 2/10, 平均损失: 5.0876
+2674.5s 25 Epoch 3/10, 平均损失: 4.9231
+3554.3s 26 Epoch 4/10, 平均损失: 4.8245
+4435.6s 27 Epoch 5/10, 平均损失: 4.7674
+5321.6s 28 Epoch 6/10, 平均损失: 4.7304
+6206.1s 29 Epoch 7/10, 平均损失: 4.6956
+7086.9s 30 Epoch 8/10, 平均损失: 4.6733
+7967.7s 31 Epoch 9/10, 平均损失: 4.6648
+8856.8s 32 Epoch 10/10, 平均损失: 4.6544
+8856.8s 33 --- 训练完成 ---
+8856.8s 34 模型已保存到: lstm_joke_generator.pth
+8857.4s 35 
+8857.4s 36 模型加载成功！
+8857.4s 37 
+8857.4s 38 输入: 'If life gives you melons'
+8857.4s 39 生成: 'if life gives you melons you bees ever eat a job i tattooed on his <unk> network. tonight and it'
+8857.4s 40 
+8857.4s 41 输入: 'why did the chicken'
+8857.4s 42 生成: 'why did the chicken cross the road? it got them to have to ever knows it still hasn't got'
+8857.4s 43 
+8857.4s 44 --- 更多生成示例 ---
+8857.4s 45 输入: 'What do you call'
+8857.4s 46 生成: 'what do you call a kid on 14. teacher promoted to <unk> jared fogle in the'
+8857.4s 47 --------------------------------------------------
+8857.4s 48 输入: 'I went to the'
+8857.4s 49 生成: 'i went to the doctor away... for gas in her pocket and nine advice sign. voting'
+8857.4s 50 --------------------------------------------------
+8857.4s 51 输入: 'There was a'
+8857.4s 52 生成: 'there was a christian bale a woman to say it was dating my money for'
+8857.4s 53 --------------------------------------------------
+8857.4s 54 输入: 'My doctor told me'
+8857.4s 55 生成: 'my doctor told me i knew a mexican, apology to <unk> yay looks man &amp; a'
+8857.4s 56 --------------------------------------------------
+8863.4s 57 /usr/local/lib/python3.11/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+8863.4s 58 warn(
+8863.5s 59 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+8863.8s 60 [NbConvertApp] Writing 16878 bytes to __notebook__.ipynb
+8866.4s 61 /usr/local/lib/python3.11/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+8866.4s 62 warn(
+8866.4s 63 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+8867.3s 64 [NbConvertApp] Writing 315789 bytes to __results__.html
