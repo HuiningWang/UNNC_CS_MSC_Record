@@ -1,0 +1,42 @@
+6.1s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+6.1s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+6.1s 3 0.00s - to python to disable frozen modules.
+6.1s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+6.6s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+6.6s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+6.6s 7 0.00s - to python to disable frozen modules.
+6.6s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+13.7s 9 使用设备: cuda
+13.7s 10 找到数据文件: /kaggle/input/short-jokes/shortjokes.csv
+13.9s 11 
+13.9s 12 --- 创建数据集 ---
+14.7s 13 找到笑话列: Joke
+15.4s 14 总词数: 191284 过滤后: 77741
+15.6s 15 词汇表大小: 77742
+15.6s 16 样本数: 4071137
+21.1s 17 模型参数数量: 50227886
+21.4s 18 
+21.4s 19 --- 开始训练（带日志） ---
+1350.6s 20 Epoch 1/10 | Loss = 2.0880 | Acc = 0.7309
+2685.5s 21 Epoch 2/10 | Loss = 1.5204 | Acc = 0.7845
+4019.4s 22 Epoch 3/10 | Loss = 1.4558 | Acc = 0.7917
+5350.5s 23 Epoch 4/10 | Loss = 1.4209 | Acc = 0.7955
+6678.3s 24 Epoch 5/10 | Loss = 1.3937 | Acc = 0.7980
+8004.7s 25 Epoch 6/10 | Loss = 1.3736 | Acc = 0.7996
+9332.4s 26 Epoch 7/10 | Loss = 1.3562 | Acc = 0.8011
+10659.8s 27 Epoch 8/10 | Loss = 1.3426 | Acc = 0.8024
+11990.9s 28 Epoch 9/10 | Loss = 1.3315 | Acc = 0.8035
+13317.9s 29 Epoch 10/10 | Loss = 1.3222 | Acc = 0.8044
+13317.9s 30 --- 训练完成 ---
+13318.2s 31 模型已保存到: /kaggle/working/attention_lstm_joke.pth
+13319.0s 32 模型已保存到: attention_lstm_joke.pth
+13323.6s 33 /usr/local/lib/python3.11/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+13323.6s 34 warn(
+13323.7s 35 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+13323.9s 36 [NbConvertApp] Writing 73974 bytes to __notebook__.ipynb
+13326.4s 37 /usr/local/lib/python3.11/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+13326.4s 38 warn(
+13326.4s 39 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+13327.2s 40 [NbConvertApp] Support files will be in __results___files/
+13327.2s 41 [NbConvertApp] Making directory __results___files
+13327.2s 42 [NbConvertApp] Writing 323289 bytes to __results__.html
