@@ -1,0 +1,59 @@
+name: Compile and Run AVL (Coursework Spec)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Prepare input
+        run: |
+          echo "9,6,2,1,4,25,16,13,37,27,17,34,10" > Input.txt
+          echo "Input.txt created"
+          cat Input.txt
+
+      - name: Measure compile time
+        id: compile
+        shell: bash
+        run: |
+          cd Ad_DS4133/Week4_lab4(course_work)/
+          start_time=$(date +%s%3N)
+          javac -encoding UTF-8 -sourcepath . AVL.java
+          end_time=$(date +%s%3N)
+          compile_time=$((end_time - start_time))
+          echo "compile_time_ms=$compile_time" >> $GITHUB_OUTPUT
+          echo "Compile time: $compile_time ms"
+
+      - name: Measure run time (with required parameters)
+        id: run
+        shell: bash
+        run: |
+          cd Ad_DS4133/Week4_lab4(course_work)/
+          start_time=$(date +%s%3N)
+          java -Dfile.encoding=UTF-8 -XX:+UseSerialGC -Xss64m -Xms1920m -Xmx1920m AVL < ../Input.txt > ../Output.txt
+          end_time=$(date +%s%3N)
+          run_time=$((end_time - start_time))
+          echo "run_time_ms=$run_time" >> $GITHUB_OUTPUT
+          echo "Run time: $run_time ms"
+
+      - name: Display results
+        run: |
+          echo "===== Output.txt ====="
+          cat Output.txt
+          echo "Compile time: ${{ steps.compile.outputs.compile_time_ms }} ms"
+          echo "Run time: ${{ steps.run.outputs.run_time_ms }} ms"
